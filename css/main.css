@@ -9,23 +9,25 @@ body{
 }
 
 h1{
-    font-size: 3rem;
     margin-bottom: 20px;
     letter-spacing: 0.04em;
 }
 
 h3{
-    font-size: 1rem;
     color: #1F3F68;
     font-weight: bold;
     letter-spacing: 0.04em;
 }
 p{
-    font-size: 1rem;
-    opacity: 0.7;
     line-height: 26px;
     letter-spacing: 0.04em;
 }
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
 
 /*Contenedor de los articulos main*/
 
@@ -35,15 +37,52 @@ p{
     max-width: 940px;
 }
 
-
-.conteiner__articles .input{
+.container-busqueda{
+    display: flex;
+    background: #F4F4F4;
+    justify-content: flex-start;
+    justify-items: center;
     width: 100%;
+    border: 1px solid white;
+    border-radius: 10px;
     padding: 5px;
     margin: 20px 0;
 }
 
+.container__popular{
+    margin-bottom: 50px;
+}
+
+.container-seeall{
+    margin-top: 50px;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+}
+
+.grid__popular{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+
+}
+
+.img-post{
+    display: block;
+}
+
+.conteiner__articles .input{
+    border: transparent;
+    background: transparent;
+    outline: none;
+    padding-left: 20px;
+    width: 100%;
+}
+
 .firstpost{
     display: flex;
+    grid-area: 1 / 1 / span 2 / span 3;
     
 }
 
@@ -52,25 +91,47 @@ p{
     flex-direction: column;
     justify-content: space-around;
     padding-right: 20px;
-    
 }
 
-.firstpost__details{
+.post__details{
     display: flex;
     justify-content: space-between;
     align-items: center;
     
 }
-.firstpost__paragraph{
-    font-size: 1rem;
+.post__paragraph{
+    font-size: 0.8rem;
     opacity: 0.7;
     line-height: 26px;
     margin-bottom: 20px;
 }
-.firstpost__title{
+.post__title{
     margin-bottom: 20px;
+    line-height: 36px;
     font-size: 2rem;
 }
+
+.post__subtitle{
+    margin: 10px 0;
+    font-size: 1.2rem;
+    line-height: 26px;
+}
+
+.details--title{
+    font-size: 0.8rem;
+    color: #1F3F68;
+    font-weight: bolder;
+
+}
+.details--subtitle{
+    color: #999999;
+    opacity: 0.8;
+}
+
+.container-icon img{
+    width: 30px;
+}
+
 
 /*header*/
 
@@ -91,14 +152,9 @@ nav ul{
     margin-right: 20px;
     color: black;
 }
-
-
-
-
-/*Banner*/
+/*----------------Banner--------------------------------------*/
 .container__banner{
     position: relative;
-
 }
 
 .banner__img{
@@ -110,19 +166,141 @@ nav ul{
     position: absolute;
     text-align: center;
     bottom: 40%;
-    left: 100xp;
     width: 100%;
     color: white;
 }
-
-.banner-p{
-    font-size: 1rem;
+.banner__details-title-main{
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.banner__details-p{
+    font-size: 1.3rem;
     line-height: 30px;
     opacity: 0.7;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.2rem;
+}
+/* All article*/
+.all-article{
+    display: flex;
+    margin-top: 20px;
+    
+}
+.all-article figure img{
+    display: block;
+    
 }
 
+.article__details{
+    margin-left: 20px;
+}
 
+/*Flechas*/
+.container-arrow{
+    display: flex;
+    margin: 30px 0 50px ;
+    justify-content: space-between;
+    align-items: center;
+}
 
-/**/
+.arrow-left,.arrow-right{
+    display: flex;
+    align-items: center;
+}
 
+.arrow-left p{
+    margin-left: 15px;
+}
+.arrow-right p{
+    margin-right: 15px;
+}
+
+/*----------------------------------------Footer---------------------------------------------------------------*/
+
+.footer{
+    background-color: #316099;
+    color: white;
+    width: 90%;
+    border-top-right-radius: 200px;
+    overflow: hidden;
+}
+
+.footer__container-part1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:20px;
+    padding-left: 200px;
+}
+
+.footer__container-part1 button{
+    padding: 20px 80px;
+    margin-right: auto;
+    color: white;
+    background: #5A98D0;
+    border-radius: 18px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.footer__container-article{
+    margin: auto;
+}
+
+.footer__container-article>h2{
+    font-size: 2rem;
+    padding: 20px;
+}
+
+.footer__container-article>p{
+    font-size: 1rem;
+    padding: 20px;
+    opacity: 0.6;
+}
+
+/*--------parte 2  del foooter*/
+.footer__container-part2{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px 14% 20px 21%;
+}
+
+.columna ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.columna ul li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    
+}
+
+.columna li h2{
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.footer-subtitle{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.columna .second-line{
+    line-height: 25px;
+}
+
+.columna li span{
+    margin-right: 20px;
+}
+
+hr{
+    opacity: 0.4;
+}
+
+.container-reseved{
+    padding: 20px 20px 20px 27.6% ;
+    opacity: 0.4;
+}
